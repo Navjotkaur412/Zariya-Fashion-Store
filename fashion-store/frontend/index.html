@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zariya — Considered Clothing</title>
+  <meta name="description" content="Zariya is an online fashion store for men, women, kids and accessories, built with considered materials and cut without compromise.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar navbar-expand-lg fixed-top an-navbar" id="mainNavbar">
+    <div class="container-fluid px-3 px-lg-5">
+      <a class="an-brand" href="#top">Zariya</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav mx-auto an-nav-links">
+          <li class="nav-item"><a class="nav-link" href="#top">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#shop">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="#offers">Offers</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center an-nav-actions">
+          <button class="an-icon-btn d-none d-lg-inline-flex" id="searchToggleBtn" aria-label="Search" data-bs-toggle="collapse" data-bs-target="#searchBar">
+            <i class="bi bi-search"></i>
+          </button>
+          <a class="an-icon-btn position-relative" href="#" id="navLoginLink" data-bs-toggle="modal" data-bs-target="#authModal">Login</a>
+          <button class="an-icon-btn position-relative" id="cartIconWrap" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-label="Open cart">
+            <i class="bi bi-handbag"></i>
+            <span class="cart-count d-none">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="collapse" id="searchBar">
+      <div class="container-fluid px-3 px-lg-5 py-3">
+        <input type="search" id="searchInput" class="form-control an-search-input" placeholder="Search brands, pieces, categories…">
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <header class="an-hero" id="top">
+    <div class="an-hero__grid">
+      <div class="an-hero__text">
+        <p class="an-hero__eyebrow reveal">Autumn / Winter Edit</p>
+        <h1 class="an-hero__headline">
+          <span class="hero-line">Clothing built</span>
+          <span class="hero-line">to be worn,</span>
+          <span class="hero-line an-hero__accent">not just owned.</span>
+        </h1>
+        <p class="an-hero__sub reveal">
+          Considered materials, honest pricing and a fit that holds up past the first wash —
+          across men's, women's, kids' and accessories.
+        </p>
+        <div class="an-hero__ctas reveal">
+          <a href="#shop" class="btn btn-primary-brand">Shop the edit</a>
+          <a href="#categories" class="btn btn-outline-brand">Browse categories</a>
+        </div>
+      </div>
+      <div class="an-hero__media">
+        <img src="https://images.pexels.com/photos/29087296/pexels-photo-29087296.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Model wearing an Zariya wool overcoat" class="an-hero__img-main">
+        <div class="an-hero__stat-card reveal">
+          <span class="an-hero__stat-number">4.8</span>
+          <span class="an-hero__stat-label">Average rating across 40,000+ reviews</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== PROMOTIONAL CAROUSEL ========== -->
+  <section class="an-promo" id="offers">
+    <div id="promoCarousel" class="carousel slide an-promo-carousel" data-bs-ride="carousel" data-bs-interval="5500">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1600&q=80" class="d-block w-100" alt="End of season sale">
+          <div class="an-promo-caption">
+            <p class="an-promo-caption__eyebrow">Season sale</p>
+            <h2>Up to 30% off outerwear</h2>
+            <p>Coats, shells and knitwear reduced while stock lasts.</p>
+            <a href="#shop" class="btn btn-light-brand">Shop the sale</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?auto=format&fit=crop&w=1600&q=80" class="d-block w-100" alt="Trending collection">
+          <div class="an-promo-caption">
+            <p class="an-promo-caption__eyebrow">Trending now</p>
+            <h2>The tailored blazer, reworked</h2>
+            <p>This week's most-added pieces across the whole store.</p>
+            <a href="#shop" class="btn btn-light-brand">See what's trending</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=1600&q=80" class="d-block w-100" alt="New arrivals discount">
+          <div class="an-promo-caption">
+            <p class="an-promo-caption__eyebrow">New in</p>
+            <h2>First order, 15% off</h2>
+            <p>Create an account at checkout and the discount applies automatically.</p>
+            <a href="#" class="btn btn-light-brand" data-bs-toggle="modal" data-bs-target="#authModal">Create an account</a>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#promoCarousel" data-bs-slide="prev" aria-label="Previous slide">
+        <span class="an-carousel-arrow"><i class="bi bi-arrow-left"></i></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel" data-bs-slide="next" aria-label="Next slide">
+        <span class="an-carousel-arrow"><i class="bi bi-arrow-right"></i></span>
+      </button>
+
+      <div class="an-promo-indicators">
+        <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CATEGORIES ========== -->
+  <section class="an-categories" id="categories">
+    <div class="container-fluid px-3 px-lg-5">
+      <div class="an-section-head reveal">
+        <h2>Shop by category</h2>
+        <p>Four wardrobes, one standard of make.</p>
+      </div>
+
+      <div class="an-category-grid">
+        <a href="#shop" data-category-jump="women" class="an-category-tile an-category-tile--large reveal">
+          <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" alt="Women's fashion">
+          <div class="an-category-tile__label">
+            <span>Women's</span>
+            <i class="bi bi-arrow-up-right"></i>
+          </div>
+        </a>
+        <a href="#shop" data-category-jump="men" class="an-category-tile reveal">
+          <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=900&q=80" alt="Men's fashion">
+          <div class="an-category-tile__label">
+            <span>Men's</span>
+            <i class="bi bi-arrow-up-right"></i>
+          </div>
+        </a>
+        <a href="#shop" data-category-jump="kids" class="an-category-tile reveal">
+          <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=900&q=80" alt="Kids collection">
+          <div class="an-category-tile__label">
+            <span>Kids</span>
+            <i class="bi bi-arrow-up-right"></i>
+          </div>
+        </a>
+        <a href="#shop" data-category-jump="accessories" class="an-category-tile reveal">
+          <img src="https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?auto=format&fit=crop&w=900&q=80" alt="Accessories">
+          <div class="an-category-tile__label">
+            <span>Accessories</span>
+            <i class="bi bi-arrow-up-right"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SHOP / PRODUCT GRID + FILTERS ========== -->
+  <section class="an-shop" id="shop">
+    <div class="container-fluid px-3 px-lg-5">
+      <div class="an-section-head reveal">
+        <h2>Best Picks</h2>
+        <p>Filter by brand, price, category or size to find your fit.</p>
+      </div>
+
+      <div class="row g-4 g-lg-5">
+        <aside class="col-lg-3">
+          <div class="an-filter-panel">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="an-filter-title mb-0">Filters</h3>
+              <button class="an-clear-link" id="clearFiltersBtn">Clear all</button>
+            </div>
+
+            <div class="an-filter-group">
+              <p class="an-filter-label">Category</p>
+              <div class="form-check">
+                <input class="form-check-input filter-category" type="radio" name="categoryFilter" value="" id="cat-all" checked>
+                <label class="form-check-label" for="cat-all">All</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input filter-category" type="radio" name="categoryFilter" value="men" id="cat-men">
+                <label class="form-check-label" for="cat-men">Men's</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input filter-category" type="radio" name="categoryFilter" value="women" id="cat-women">
+                <label class="form-check-label" for="cat-women">Women's</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input filter-category" type="radio" name="categoryFilter" value="kids" id="cat-kids">
+                <label class="form-check-label" for="cat-kids">Kids</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input filter-category" type="radio" name="categoryFilter" value="accessories" id="cat-accessories">
+                <label class="form-check-label" for="cat-accessories">Accessories</label>
+              </div>
+            </div>
+
+            <div class="an-filter-group">
+              <p class="an-filter-label">Brand</p>
+              <div id="brandFilterList" class="an-brand-list"><!-- populated by JS --></div>
+            </div>
+
+            <div class="an-filter-group">
+              <p class="an-filter-label d-flex justify-content-between">
+                <span>Max price</span>
+                <span id="priceRangeValue">₹8,000</span>
+              </p>
+              <input type="range" class="form-range" min="500" max="8000" step="100" value="8000" id="priceRange">
+            </div>
+
+            <div class="an-filter-group">
+              <p class="an-filter-label">Size</p>
+              <div class="an-size-filter">
+                <button type="button" class="filter-size" data-size="XS">XS</button>
+                <button type="button" class="filter-size" data-size="S">S</button>
+                <button type="button" class="filter-size" data-size="M">M</button>
+                <button type="button" class="filter-size" data-size="L">L</button>
+                <button type="button" class="filter-size" data-size="XL">XL</button>
+                <button type="button" class="filter-size" data-size="One Size">1 SZ</button>
+                <button type="button" class="filter-size" data-size="34">34</button>
+                <button type="button" class="filter-size" data-size="36">36</button>
+                <button type="button" class="filter-size" data-size="38">38</button>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <div class="col-lg-9">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+            <div class="d-flex align-items-center gap-2">
+              <span id="resultsCount" class="an-results-count"></span>
+            </div>
+            <select id="sortSelect" class="form-select an-sort-select">
+              <option value="newest">Newest</option>
+              <option value="price_asc">Price: low to high</option>
+              <option value="price_desc">Price: high to low</option>
+              <option value="rating">Top rated</option>
+            </select>
+          </div>
+
+          <div class="row g-3 g-md-4" id="productGrid"><!-- populated by JS --></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TRUST / REVIEW STRIP ========== -->
+  <section class="an-trust reveal">
+    <div class="container-fluid px-3 px-lg-5">
+      <div class="an-trust-grid">
+        <div class="an-trust-item">
+          <i class="bi bi-truck"></i>
+          <p>Free shipping over ₹2,999</p>
+        </div>
+        <div class="an-trust-item">
+          <i class="bi bi-arrow-repeat"></i>
+          <p>Free 30-day returns</p>
+        </div>
+        <div class="an-trust-item">
+          <i class="bi bi-shield-check"></i>
+          <p>Secure checkout, every order</p>
+        </div>
+        <div class="an-trust-item">
+          <i class="bi bi-award"></i>
+          <p>Rated 4.8 by 40,000+ customers</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NEWSLETTER ========== -->
+  <section class="an-newsletter">
+    <div class="container-fluid px-3 px-lg-5">
+      <div class="an-newsletter-inner reveal">
+        <div>
+          <h2>Get first access to new drops</h2>
+          <p>One email a week. New arrivals, restocks and considered edits — no noise.</p>
+        </div>
+        <form id="newsletterForm" class="an-newsletter-form">
+          <input type="email" required aria-label="Email address">
+          <button type="submit" class="btn btn-primary-brand">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="an-footer">
+    <div class="container-fluid px-3 px-lg-5">
+      <div class="an-footer-grid">
+        <div class="an-footer-brand">
+          <p class="an-brand an-brand--footer">Zariya</p>
+          <p class="text-muted">Considered clothing for men, women, kids and the details in between.</p>
+        </div>
+        <div>
+          <p class="an-footer-heading">Shop</p>
+          <a href="#shop" data-category-jump="men">Men's</a>
+          <a href="#shop" data-category-jump="women">Women's</a>
+          <a href="#shop" data-category-jump="kids">Kids</a>
+          <a href="#shop" data-category-jump="accessories">Accessories</a>
+        </div>
+        <div>
+          <p class="an-footer-heading">Help</p>
+          <a href="#">Shipping &amp; returns</a>
+          <a href="#">Size guide</a>
+          <a href="#">Contact us</a>
+          <a href="#">Track an order</a>
+        </div>
+        <div>
+          <p class="an-footer-heading">Company</p>
+          <a href="#">About</a>
+          <a href="#">Sustainability</a>
+          <a href="#">Careers</a>
+        </div>
+      </div>
+      <div class="an-footer-bottom">
+        <p class="text-muted small mb-0">&copy; <span id="yearNow"></span> Zariya. All rights reserved.</p>
+        <div class="an-footer-socials">
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+          <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== CART OFFCANVAS ========== -->
+  <div class="offcanvas offcanvas-end an-cart-offcanvas" tabindex="-1" id="cartOffcanvas">
+    <div class="offcanvas-header">
+      <h3 class="offcanvas-title">Your bag</h3>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div id="cartEmptyState" class="cart-empty-state d-none">
+        <i class="bi bi-handbag"></i>
+        <p>Your bag is empty.</p>
+        <a href="#shop" class="btn btn-outline-brand" data-bs-dismiss="offcanvas">Continue shopping</a>
+      </div>
+
+      <div id="cartItemsList" class="cart-items-list flex-grow-1"></div>
+
+      <div id="cartSummary" class="cart-summary d-none">
+        <div class="cart-summary__row">
+          <span>Subtotal</span><span id="cartSubtotal">₹0</span>
+        </div>
+        <div class="cart-summary__row">
+          <span>Shipping</span><span id="cartShipping">Free</span>
+        </div>
+        <div class="cart-summary__row">
+          <span>GST (5%)</span><span id="cartTax">₹0</span>
+        </div>
+        <div class="cart-summary__row cart-summary__row--total">
+          <span>Total</span><span id="cartTotal">₹0</span>
+        </div>
+        <button class="btn btn-primary-brand w-100 mt-3" id="checkoutBtn">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== PRODUCT MODAL ========== -->
+  <div class="modal fade an-product-modal" id="productModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <button type="button" class="btn-close an-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body p-0" id="productModalBody"><!-- populated by JS --></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== AUTH MODAL ========== -->
+  <div class="modal fade" id="authModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content an-auth-modal">
+        <div class="modal-body">
+          <button type="button" class="btn-close an-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h3 id="authModalTitle">Log in</h3>
+          <form id="authForm">
+            <div class="mb-3 d-none" id="authNameField">
+              <label class="form-label" for="authName">Full name</label>
+              <input type="text" class="form-control" id="authName">
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="authEmail">Email</label>
+              <input type="email" class="form-control" id="authEmail" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="authPassword">Password</label>
+              <input type="password" class="form-control" id="authPassword" required minlength="6">
+            </div>
+            <button type="submit" class="btn btn-primary-brand w-100" id="authSubmitBtn">Log in</button>
+            <p id="authFeedback" class="small mt-2"></p>
+          </form>
+          <button type="button" class="an-link-btn mt-2" id="authToggleMode">Don't have an account? Sign up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== PAYMENT MODAL ========== -->
+  <div class="modal fade" id="paymentModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content an-payment-modal">
+        <div class="modal-body">
+          <button type="button" class="btn-close an-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+          <div id="paymentForm-wrap">
+            <p class="an-payment-eyebrow"><i class="bi bi-lock-fill"></i> Secure checkout</p>
+            <h3>Payment details</h3>
+            <form id="paymentForm">
+              <div class="mb-3">
+                <label class="form-label" for="cardName">Name on card</label>
+                <input type="text" class="form-control" id="cardName" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="cardNumber">Card number</label>
+                <input type="text" class="form-control" id="cardNumber" required inputmode="numeric">
+              </div>
+              <div class="row g-2 mb-3">
+                <div class="col-6">
+                  <label class="form-label" for="cardExpiry">Expiry</label>
+                  <input type="text" class="form-control" id="cardExpiry" required inputmode="numeric">
+                </div>
+                <div class="col-6">
+                  <label class="form-label" for="cardCvc">CVC</label>
+                  <input type="text" class="form-control" id="cardCvc" required inputmode="numeric">
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary-brand w-100" id="paymentSubmitBtn">Pay <span id="paymentTotal">₹0</span></button>
+              <p class="an-payment-note">This is a demo payment form. Connect the included Stripe integration in <code>/backend</code> to process real cards.</p>
+            </form>
+          </div>
+
+          <div id="paymentSuccess" class="an-payment-success d-none">
+            <div class="an-payment-success__icon"><i class="bi bi-check-lg"></i></div>
+            <h3>Order confirmed</h3>
+            <p>A confirmation has been sent to your email. Thank you for shopping Zariya.</p>
+            <button type="button" class="btn btn-outline-brand" data-bs-dismiss="modal">Continue shopping</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== TOASTS ========== -->
+  <div id="toastContainer" class="an-toast-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

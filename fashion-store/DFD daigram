@@ -1,0 +1,37 @@
+The Level 0 Data Flow Diagram (Context Diagram) of the Zariya Fashion Store System shows how the system interacts with two external entities: User (Customer) and Admin.
+
+1. User (Customer) → Zariya Fashion Store System
+The customer provides the following information to the system:
+
+Registration / Login – The customer creates an account or logs into the system.
+
+Product Search – The customer searches and browses available fashion products.
+
+Place Order – The customer selects products and places an order.
+
+2. Zariya Fashion Store System → User (Customer)
+The system provides the following information to the customer:
+
+Product Details – Information about products such as name, price, size, and description.
+
+Cart Information – Details of products added to the shopping cart.
+
+Order Confirmation – Confirmation after the order is successfully placed.
+
+3. Admin → Zariya Fashion Store System
+The Admin interacts with the system to:
+
+Manage Products – Add, update, or delete products.
+
+Manage Orders – View and update customer orders.
+
+View Reports – Access information and reports related to products and orders.
+
+4. Zariya Fashion Store System → Admin
+The system provides the Admin with:
+
+Product Data – Details of available products.
+
+Order Data – Information about customer orders.
+
+Reports – System-generated information related to products and orders.

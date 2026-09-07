@@ -1,0 +1,93 @@
+┌──────────────────┐
+│       USER       │
+├──────────────────┤
+│ _id (PK)         │
+│ name             │
+│ email            │
+│ password         │
+│ role             │
+│ createdAt        │
+└────────┬─────────┘
+         │
+         │ 1
+         │
+         │ has
+         │
+         ▼ M
+┌──────────────────┐
+│       CART       │
+├──────────────────┤
+│ _id (PK)         │
+│ user (FK)        │
+│ items[]          │
+└────────┬─────────┘
+         │
+         │ contains
+         ▼
+┌──────────────────┐
+│   CART ITEMS     │
+├──────────────────┤
+│ product (FK)     │───────────────┐
+│ quantity         │               │
+│ size             │               │
+└──────────────────┘               │
+                                   │
+                                   ▼
+                         ┌──────────────────┐
+                         │     PRODUCT      │
+                         ├──────────────────┤
+                         │ _id (PK)         │
+                         │ name             │
+                         │ brand            │
+                         │ category         │
+                         │ price            │
+                         │ salePrice        │
+                         │ sizes[]          │
+                         │ image            │
+                         │ description      │
+                         │ reviews[]        │
+                         └────────┬─────────┘
+                                  │
+                                  │ has
+                                  ▼
+                         ┌──────────────────┐
+                         │     REVIEW       │
+                         ├──────────────────┤
+                         │ user (FK)        │
+                         │ name             │
+                         │ rating           │
+                         │ comment          │
+                         └──────────────────┘
+
+
+USER  ──────────────── places ───────────────► ORDER
+  1                                             M
+                                                │
+                                                ▼
+                                      ┌──────────────────┐
+                                      │      ORDER       │
+                                      ├──────────────────┤
+                                      │ _id (PK)         │
+                                      │ user (FK)        │
+                                      │ orderItems[]     │
+                                      │ shippingAddress  │
+                                      │ paymentMethod    │
+                                      │ totalPrice       │
+                                      │ isPaid           │
+                                      │ isDelivered      │
+                                      │ createdAt        │
+                                      └────────┬─────────┘
+                                               │
+                                               │ contains
+                                               ▼
+                                      ┌──────────────────┐
+                                      │   ORDER ITEMS    │
+                                      ├──────────────────┤
+                                      │ product (FK)     │
+                                      │ quantity         │
+                                      │ size             │
+                                      │ price            │
+                                      └────────┬─────────┘
+                                               │
+                                               ▼
+                                           PRODUCT
